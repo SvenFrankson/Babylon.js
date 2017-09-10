@@ -303,6 +303,7 @@ module BABYLON.GUI {
                 let y = (scene.pointerY / engine.getHardwareScalingLevel() - viewport.y * engine.getRenderHeight()) / viewport.height;
 
                 this._shouldBlockPointer = false;
+                
                 this._doPicking(x, y, pi.type);
 
                 pi.skipOnPointerObservable = this._shouldBlockPointer && pi.type !== BABYLON.PointerEventTypes.POINTERUP;
